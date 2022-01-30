@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&family=Lexend+Deca:wght@400;700&display=swap");
+
+//Main background
+$very-dark-blue: hsl(233, 47%, 7%);
+//Card background
+$dark-desaturated-blue: hsl(244, 38%, 16%);
+//Insights word
+$soft-violet: hsl(277, 64%, 61%);
+//Main heading, stats
+$white: hsl(0, 0%, 100%);
+// Main paragraph
+$slightly-transparent-white-main: hsla(0, 0%, 100%, 0.75);
+//stats heading
+$slightly-transparent-white-stats: hsla(0, 0%, 100%, 0.6);
+$border: 0.1px solid black;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $very-dark-blue;
+  height: 100vh;
+
+  .container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .container-card {
+      display: flex;
+      width: 80%;
+      border-radius: 15px;
+      overflow: hidden;
+    }
+  }
+}
+
+.left-card {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: $dark-desaturated-blue;
+  width: 50%;
+
+  h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    font-family: "Kumbh Sans", sans-serif;
+    color: $white;
+    width: 75%;
+    margin: 3% 0 0 12%;
+
+    .insight {
+      color: $soft-violet;
+    }
+  }
+
+  p {
+    font-family: "Lexend Deca", sans-serif;
+    font-size: 0.8rem;
+    font-weight: 100;
+    width: 63%;
+    line-height: 1.3rem;
+    margin: 0 0 0 12%;
+    letter-spacing: 0.4px;
+
+    color: $slightly-transparent-white-main;
+  }
+
+  .footer {
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 1% 0 0 2%;
+    align-items: center;
+
+    .item {
+      line-height: 1.6rem;
+
+      .nums {
+        font-family: "Kumbh Sans", sans-serif;
+        font-size: 1.5rem;
+        color: $white;
+      }
+
+      .stats {
+        font-family: "Lexend Deca", sans-serif;
+        font-size: 0.8rem;
+        font-weight: 100;
+        color: $slightly-transparent-white-stats;
+        letter-spacing: 1px;
+      }
+    }
+  }
+}
+
+.right-card {
+  flex: 1;
+  background-image: url("../img/image-header-desktop.jpg");
+  width: 45%;
+  aspect-ratio: 1.4/1;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-color: $soft-violet;
+  background-blend-mode: multiply;
+}
+
+//Mobile devices
+@media screen and (max-width: 1000px) {
+  .container {
+    margin-top: 30%;
+  }
+
+  .container-card {
+    background-color: $dark-desaturated-blue;
+    flex-direction: column;
+
+    .left-card {
+      width: 85%;
+      margin: 0 auto;
+      text-align: center;
+      order: 2;
+      align-items: center;
+    }
+
+    h1 {
+      margin: 0 auto;
+      font-size: 1.8rem;
+      margin-top: 30px;
+      width: 85%;
+    }
+
+    p {
+      width: 90%;
+      line-height: 1.5rem;
+
+      margin: 15px auto;
+    }
+
+    .footer {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+
+      .item {
+        padding: 15px;
+      }
+
+      .nums {
+        font-size: 1.4rem;
+
+        margin: 0 0;
+      }
+
+      .stats {
+        font-size: 0.6rem;
+        font-weight: 100;
+      }
+    }
+
+    .right-card {
+      order: 1;
+      width: 100%;
+      aspect-ratio: 1.5/1;
+      background-size: 100% 100%;
+      background-image: url("../img/image-header-mobile.jpg");
+    }
+  }
+}
