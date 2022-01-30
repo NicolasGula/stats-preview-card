@@ -28,8 +28,8 @@ Los usuarios deben ser capaces de:
 
 ### Links
 
-- Solutcion URL : [Add solution URL here](https://your-solution-url.com)
-- URL del sitio : [Add live site URL here](https://your-live-site-url.com)
+- Solutcion URL : [https://github.com/NicolasGula/stats-preview-card](https://github.com/NicolasGula/stats-preview-card)
+- URL del sitio : [https://nicolasgula.github.io/stats-preview-card/](https://nicolasgula.github.io/stats-preview-card/)
 
 ### Hecho con
 
